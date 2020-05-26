@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsMenu">
+
+    <RadioGroup
+        android:id="@+id/settingsRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/settingsMinute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dakika" />
+
+        <RadioButton
+            android:id="@+id/settingsHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saat" />
+
+        <RadioButton
+            android:id="@+id/settingsDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gün" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Varsayılan Hatırlatma Zamanı"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtReminderSetting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/settingsRadio"
+        app:layout_constraintEnd_toEndOf="@+id/txtReminder"
+        app:layout_constraintStart_toStartOf="@+id/txtReminder" />
+
+    <TextView
+        android:id="@+id/txtRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Varsayılan Tekrarlama Sıklığı"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtReminderSetting" />
+
+    <Spinner
+        android:id="@+id/spnSettingsFreq"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:entries="@array/spinner_items"
+        app:layout_constraintEnd_toEndOf="@+id/txtRepeat"
+        app:layout_constraintStart_toStartOf="@+id/txtRepeat"
+        app:layout_constraintTop_toBottomOf="@+id/txtRepeat" />
+
+    <Switch
+        android:id="@+id/swtUIMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Aydınlık Mod"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnSettingsFreq" />
+
+    <Button
+        android:id="@+id/btnSaveSettings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Kaydet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swtUIMode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

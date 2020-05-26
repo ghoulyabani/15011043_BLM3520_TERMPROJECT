@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/edtCaption"
+        android:layout_width="261dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:hint="Etkinlik Başlığı"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="0dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Açıklama"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/edtCaption"
+        app:layout_constraintStart_toStartOf="@+id/edtCaption"
+        app:layout_constraintTop_toBottomOf="@+id/edtCaption" />
+
+    <ImageButton
+        android:id="@+id/setEndTime"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@mipmap/clock"
+        app:layout_constraintStart_toStartOf="@+id/listReminder"
+        app:layout_constraintTop_toBottomOf="@+id/setStartTime"></ImageButton>
+
+    <ImageButton
+        android:id="@+id/setStartTime"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@mipmap/clock"
+        app:layout_constraintStart_toStartOf="@+id/listReminder"
+        app:layout_constraintTop_toBottomOf="@+id/listReminder"></ImageButton>
+
+    <TextView
+        android:id="@+id/txtStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="00:00"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtDescription"
+        app:layout_constraintTop_toBottomOf="@+id/listReminder" />
+
+    <TextView
+        android:id="@+id/txtEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="00:00"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtDescription"
+        app:layout_constraintTop_toBottomOf="@+id/txtStart" />
+
+    <TextView
+        android:id="@+id/txtStartLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Başlangıç"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtStart"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="@+id/edtDescription"
+        app:layout_constraintTop_toBottomOf="@+id/listReminder" />
+
+    <TextView
+        android:id="@+id/txtEndLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="23dp"
+        android:text="Bitiş"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtEnd"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="@+id/edtDescription"
+        app:layout_constraintTop_toBottomOf="@+id/txtStartLabel" />
+
+    <Spinner
+        android:id="@+id/spnFreq"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:entries="@array/spinner_items"
+        app:layout_constraintEnd_toEndOf="@+id/edtDescription"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtDescription"
+        app:layout_constraintTop_toBottomOf="@+id/listReminder" />
+
+    <Button
+        android:id="@+id/btnEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Ekle"
+        app:layout_constraintEnd_toEndOf="@+id/spnFreq"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/spnFreq"
+        app:layout_constraintTop_toBottomOf="@+id/spnFreq" />
+
+    <ListView
+        android:id="@+id/listReminder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtDescription"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtDescription"
+        app:layout_constraintTop_toBottomOf="@+id/btnReminder" />
+
+    <Button
+        android:id="@+id/btnReminder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Hatırlatıcı Ekle"
+        app:layout_constraintEnd_toEndOf="@+id/edtDescription"
+        app:layout_constraintStart_toStartOf="@+id/edtDescription"
+        app:layout_constraintTop_toBottomOf="@+id/edtDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

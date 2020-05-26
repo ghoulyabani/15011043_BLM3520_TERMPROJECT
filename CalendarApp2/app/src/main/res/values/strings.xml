@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CalendarApp2</string>
+
+    <string-array name="spinner_items">
+        <item>Asla</item>
+        <item>Günlük</item>
+        <item>Haftalık</item>
+        <item>Aylık</item>
+        <item>Yıllık</item>
+    </string-array>
+</resources>
